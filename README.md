@@ -1,3 +1,49 @@
+4. GitHub Pages
+GitHub Pages is one of the fastest and most widely used methods for beginners to deploy websites. It’s easier to maintain than many other tools described in this guide. With GitHub actions, you can trigger automatic deployments, configure CI/CD, and much more.
+
+Create a GitHub account if you haven’t already, then create a repository for your application.
+
+In your terminal, initialize the local directory as a Git repository, commit all the changes, and push it to remote by running the following command in the project root.
+
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin .git
+git push -u origin master
+You’ll get this repository URL when you create a new repository.
+
+GitHub Repo URL
+With this, your project will be pushed to GitHub.
+
+In your project’s package.json add a homepage field, like this:
+
+"homepage": "https://myusername.github.io/my-app"
+myusername is your GitHub username and my-app is your repository’s name.
+
+Next, install gh-pages in your project.
+
+npm install --save gh-pages
+In your package.json, add the following scripts.
+
+"scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+}
+predeploy and deploy are the only additions to the scrips. predeploy will automatically run before deploy and make sure the latest build of the application is deployed.
+
+Run the following command to deploy the application.
+
+npm run deploy
+This command will create a new branch named gh-pages in your project’s GitHub repository. You may need to set a source under the GitHub Pages option in your repository’s settings to gh-pages branch.
+
+gh-pages Branch
+===========================================================================================================
+
+Local deployments and run
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
