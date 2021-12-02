@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <div>
-        <Welcome name="Sara" />
+        <Welcome name="Sar" />
         <Welcome name="Teo" />
       </div>
       <div>
