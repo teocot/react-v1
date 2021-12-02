@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 function Welcome(props) {
-  return <h1>Helloyee, {props.name}</h1>;
+  return <h1>Helloyeem, {props.name}</h1>;
 }
 function ComponentTwo(props) {
   return <h1>This is {props.role}</h1>;
