@@ -12,6 +12,7 @@ function App() {
     <div>
       <div>
         <Welcome name="Teodor Cotruta" />
+        <Welcome name="TeoCot" />
       </div>
       <div>
         <ComponentTwo role="Manager" />
