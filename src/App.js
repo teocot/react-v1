@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <div>
-        <Welcome name="Teo" />
+        <Welcome name="Teodor Cotruta" />
       </div>
       <div>
         <ComponentTwo role="Manager" />
